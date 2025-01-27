@@ -28,8 +28,8 @@
             Console.WriteLine($"Sum: {sum}");
             Console.WriteLine($"Difference: {difference}");
             #endregion
-            
-            #region
+
+            #region employee
             Employee employee = new Employee();
             employee.Work();
             Manger manager = new Manger();
@@ -45,6 +45,29 @@
 
             BaseClass derived2Obj = new DerivedClass2();
             derived2Obj.DisplayMessage();
+            #endregion
+            #region duration
+            Duration D1 = new Duration(1, 10, 15);
+            Duration D2 = new Duration(7800);
+            Duration D3 = D1 + D2;
+            Console.WriteLine(D3);
+            D3 = D1 + 7800;
+            Console.WriteLine(D3);
+            D3 = 666 + D3;
+            Console.WriteLine(D3);
+            D3 = ++D1;
+            Console.WriteLine(D3);
+            D3 = --D2;
+            Console.WriteLine(D3);
+            D1 = D1 - D2;
+            Console.WriteLine(D1);
+            if (D1 > D2)
+                Console.WriteLine("D1 is greater than D2");
+            else
+                Console.WriteLine("D1 is not greater than D2");
+            if (D1 <= D2)
+                Console.WriteLine("D1 is less than or equal to D2");
+
             #endregion
         }
     }
